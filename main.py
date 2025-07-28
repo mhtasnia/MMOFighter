@@ -8,19 +8,19 @@ class Game:
         pygame.init()
         pygame.mixer.init()
 
-        self.ATTACK_SOUND = pygame.mixer.Sound('assets/sounds/attack.mp3')
-        self.BLOCK_SOUND = pygame.mixer.Sound('assets/sounds/block.mp3')
-        self.JUMP_SOUND = pygame.mixer.Sound('assets/sounds/jump.mp3')
+        self.ATTACK_SOUND = pygame.mixer.Sound('MMOFighter/assets/sounds/attack.mp3')
+        self.BLOCK_SOUND = pygame.mixer.Sound('MMOFighter/assets/sounds/block.mp3')
+        self.JUMP_SOUND = pygame.mixer.Sound('MMOFighter/assets/sounds/jump.mp3')
 
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
-        self.player = Player(100, 100, "assets/characters/character1.png", self.ATTACK_SOUND, self.BLOCK_SOUND, self.JUMP_SOUND)
+        self.player = Player(100, 100, "MMOFighter/assets/characters/character1.png", self.ATTACK_SOUND, self.BLOCK_SOUND, self.JUMP_SOUND)
         self.clock = pygame.time.Clock()
 
-        self.background = pygame.image.load("assets/characters/battleground.png").convert()
+        self.background = pygame.image.load("MMOFighter/assets/characters/battleground.png").convert()
         self.background = pygame.transform.scale(self.background, (WIDTH, HEIGHT))
-        self.player1 = Player(100, 200, "assets/characters/character1.png", self.ATTACK_SOUND, self.BLOCK_SOUND, self.JUMP_SOUND)
-        self.player2 = Player(700, 200, "assets/characters/character2.png", self.ATTACK_SOUND, self.BLOCK_SOUND, self.JUMP_SOUND)
+        self.player1 = Player(100, 200, "MMOFighter/assets/characters/character1.png", self.ATTACK_SOUND, self.BLOCK_SOUND, self.JUMP_SOUND)
+        self.player2 = Player(700, 200, "MMOFighter/assets/characters/character2.png", self.ATTACK_SOUND, self.BLOCK_SOUND, self.JUMP_SOUND)
 
         self.font = pygame.font.SysFont("Arial", 30)
         self.controls_font = pygame.font.SysFont("Arial", CONTROLS_FONT_SIZE)
@@ -29,7 +29,7 @@ class Game:
         self.game_state = GAME_STATE_MENU
         self.paused = False
 
-        pygame.mixer.music.load("assets/sounds/background-music-happy-375038.mp3")
+        pygame.mixer.music.load("MMOFighter/assets/sounds/background-music-happy-375038.mp3")
         pygame.mixer.music.play(-1)
 
 
@@ -86,8 +86,8 @@ class Game:
         pygame.draw.rect(self.screen, BLUE, (x, y, HEALTH_BAR_WIDTH * ratio, HEALTH_BAR_HEIGHT))
 
     def reset_game(self):
-        self.player1 = Player(100, 200, "assets/characters/character1.png", self.ATTACK_SOUND, self.BLOCK_SOUND, self.JUMP_SOUND)
-        self.player2 = Player(700, 200, "assets/characters/character2.png", self.ATTACK_SOUND, self.BLOCK_SOUND, self.JUMP_SOUND)
+        self.player1 = Player(100, 200, "MMOFighter/assets/characters/character1.png", self.ATTACK_SOUND, self.BLOCK_SOUND, self.JUMP_SOUND)
+        self.player2 = Player(700, 200, "MMOFighter/assets/characters/character2.png", self.ATTACK_SOUND, self.BLOCK_SOUND, self.JUMP_SOUND)
         self.game_state = GAME_STATE_RUNNING
         self.paused = False
 
