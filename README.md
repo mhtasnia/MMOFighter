@@ -39,3 +39,50 @@ pip install -r requirements.txt
 
 # 4. Run the game
 python main.py
+```
+</details>
+
+
+---
+
+## 🎮 How to Play
+
+🧑‍🤝‍🧑 **2 Players, 1 Keyboard – Let the brawling begin!**
+
+### 🕹 Player Controls
+
+| Action      | Player 1         | Player 2         |
+|-------------|------------------|------------------|
+| Move Up     | `W`              | `↑ Arrow`        |
+| Move Down   | `S`              | `↓ Arrow`        |
+| Move Left   | `A`              | `← Arrow`        |
+| Move Right  | `D`              | `→ Arrow`        |
+| Attack      | `F`              | `K`              |
+
+🏆 **Goal:** Knock out your opponent by landing hits and draining their health bar!
+
+---
+
+## 🖼 Screenshots
+
+> 
+
+<p align="center">
+  <img src="assets/screenshot1.png" width="45%" alt="Gameplay Screenshot 1"/>
+  &nbsp;
+  <img src="assets/screenshot2.png" width="45%" alt="Gameplay Screenshot 2"/>
+</p>
+
+---
+
+## 📁 Project Structure
+
+```bash
+MMOFighter/
+├── assets/              # Sprites, sounds, backgrounds
+├── main.py              # Main entry point
+├── game.py              # Game loop and scene handling
+├── player.py            # Player movement, attack logic
+├── utils.py             # Helper functions/utilities
+└── README.md            # This file
+
